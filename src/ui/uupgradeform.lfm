@@ -1,0 +1,116 @@
+object frmUpgrade: TfrmUpgrade
+  Left = 450
+  Height = 450
+  Top = 200
+  Width = 540
+  BorderStyle = bsDialog
+  Caption = 'ENGINEERING TERMINAL'
+  ClientHeight = 450
+  ClientWidth = 540
+  Color = clBtnFace
+  Font.Name = 'Consolas'
+  Position = poMainFormCenter
+  LCLVersion = '4.8.0.0'
+  OnShow = FormShow
+  object lblTitle: TLabel
+    Left = 16
+    Height = 30
+    Top = 16
+    Width = 236
+    Caption = 'HARDWARE UPGRADES'
+    Font.Color = clBlack
+    Font.Height = -21
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lblWallet: TLabel
+    Left = 280
+    Height = 30
+    Top = 16
+    Width = 244
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = 'CREDITS: 0'
+    Font.Color = clMenuHighlight
+    Font.Height = -21
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object sgUpgrades: TStringGrid
+    Left = 16
+    Height = 200
+    Top = 64
+    Width = 508
+    AutoFillColumns = True
+    Color = clMenu
+    ColCount = 4
+    FixedCols = 0
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Consolas'
+    Font.Quality = fqCleartypeNatural
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect]
+    ParentFont = False
+    RowCount = 1
+    TabOrder = 0
+    OnSelectCell = sgUpgradesSelectCell
+    ColWidths = (
+      126
+      126
+      126
+      126
+    )
+    Cells = (
+      4
+      0
+      0
+      'ID'
+      1
+      0
+      'MODULE NAME'
+      2
+      0
+      'LEVEL'
+      3
+      0
+      'COST'
+    )
+  end
+  object memoDesc: TMemo
+    Left = 16
+    Height = 80
+    Top = 280
+    Width = 508
+    Color = clCream
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'Consolas'
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 1
+  end
+  object btnBuy: TButton
+    Left = 16
+    Height = 50
+    Top = 376
+    Width = 240
+    Caption = 'PURCHASE UPGRADE'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+    OnClick = btnBuyClick
+  end
+  object btnClose: TButton
+    Left = 284
+    Height = 50
+    Top = 376
+    Width = 240
+    Caption = 'CLOSE TERMINAL'
+    Font.Style = [fsBold]
+    ModalResult = 11
+    ParentFont = False
+    TabOrder = 3
+    OnClick = btnCloseClick
+  end
+end

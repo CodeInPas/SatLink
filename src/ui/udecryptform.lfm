@@ -1,0 +1,163 @@
+object frmDecrypt: TfrmDecrypt
+  Left = 400
+  Height = 350
+  Top = 250
+  Width = 450
+  BorderStyle = bsDialog
+  Caption = 'SAT-LINK: DECRYPTION TERMINAL'
+  ClientHeight = 350
+  ClientWidth = 450
+  Color = clBtnFace
+  Font.Name = 'Consolas'
+  Position = poMainFormCenter
+  LCLVersion = '4.8.0.0'
+  OnClose = FormClose
+  OnShow = FormShow
+  object pnlBackground: TPanel
+    Left = 10
+    Height = 330
+    Top = 10
+    Width = 430
+    Align = alClient
+    BorderSpacing.Around = 10
+    BevelOuter = bvLowered
+    ClientHeight = 330
+    ClientWidth = 430
+    Color = clForm
+    Font.Color = clBlack
+    Font.Name = 'Consolas'
+    ParentBackground = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    object lblHeader: TLabel
+      Left = 1
+      Height = 25
+      Top = 1
+      Width = 428
+      Align = alTop
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'SECURE PAYLOAD INTERCEPTED'
+      Color = clMaroon
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      Transparent = False
+    end
+    object lblWarning: TLabel
+      Left = 1
+      Height = 20
+      Top = 26
+      Width = 428
+      Align = alTop
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'WARNING: ENEMY TRACE DETECTED'
+      Font.Color = clRed
+      Font.Height = -13
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object pbTrace: TProgressBar
+      Left = 10
+      Height = 20
+      Top = 46
+      Width = 410
+      Align = alTop
+      BorderSpacing.Left = 9
+      BorderSpacing.Right = 9
+      Smooth = True
+      TabOrder = 2
+      BarShowText = True
+    end
+    object memoHexStream: TMemo
+      Left = 10
+      Height = 100
+      Top = 76
+      Width = 410
+      Align = alTop
+      BorderSpacing.Left = 9
+      BorderSpacing.Top = 10
+      BorderSpacing.Right = 9
+      Color = clInfoBk
+      Font.Color = clPurple
+      Font.Height = -13
+      Font.Name = 'Consolas'
+      Lines.Strings = (
+        '41 4C 50 48 41'
+      )
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 0
+    end
+    object lblInstruction: TLabel
+      Left = 10
+      Height = 15
+      Top = 186
+      Width = 410
+      Align = alTop
+      BorderSpacing.Left = 9
+      BorderSpacing.Top = 10
+      BorderSpacing.Right = 9
+      Caption = 'ENTER DECRYPTION KEY:'
+      Font.Color = clBackground
+      ParentFont = False
+    end
+    object edtDecodedKey: TEdit
+      Left = 10
+      Height = 33
+      Top = 206
+      Width = 410
+      Align = alTop
+      BorderSpacing.Left = 9
+      BorderSpacing.Top = 5
+      BorderSpacing.Right = 9
+      Color = clInfoBk
+      Font.Color = clAqua
+      Font.Height = -19
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+      OnKeyPress = edtDecodedKeyKeyPress
+    end
+    object btnDecrypt: TButton
+      Left = 10
+      Height = 40
+      Top = 249
+      Width = 410
+      Align = alTop
+      BorderSpacing.Left = 9
+      BorderSpacing.Top = 10
+      BorderSpacing.Right = 9
+      Caption = 'EXECUTE DECRYPTION'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 3
+      OnClick = btnDecryptClick
+    end
+    object lblStatus: TLabel
+      Left = 1
+      Height = 15
+      Top = 299
+      Width = 428
+      Align = alTop
+      Alignment = taCenter
+      BorderSpacing.Top = 10
+      Caption = 'AWAITING KEY INPUT...'
+      Font.Color = clBlack
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+  end
+  object TraceTimer: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = TraceTimerTimer
+    Left = 384
+    Top = 120
+  end
+end

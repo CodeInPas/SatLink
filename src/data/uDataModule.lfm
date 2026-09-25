@@ -1,0 +1,74 @@
+object GameDataModule: TGameDataModule
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  OldCreateOrder = False
+  Height = 200
+  HorizontalOffset = 300
+  VerticalOffset = 300
+  Width = 350
+  object SQLiteConn: TSQLite3Connection
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = True
+    Transaction = SQLTrans
+    AlwaysUseBigint = False
+    Left = 40
+    Top = 24
+  end
+  object SQLTrans: TSQLTransaction
+    Active = False
+    Database = SQLiteConn
+    Left = 40
+    Top = 88
+  end
+  object qryLookup: TSQLQuery
+    PacketRecords = -1
+    FieldDefs = <>
+    Database = SQLiteConn
+    Transaction = SQLTrans
+    Params = <>
+    Macros = <>
+    Left = 112
+    Top = 24
+  end
+  object qryTargets: TSQLQuery
+    PacketRecords = -1
+    FieldDefs = <>
+    Database = SQLiteConn
+    Transaction = SQLTrans
+    Params = <>
+    Macros = <>
+    Left = 176
+    Top = 24
+  end
+  object qryWallet: TSQLQuery
+    PacketRecords = -1
+    FieldDefs = <>
+    Database = SQLiteConn
+    Transaction = SQLTrans
+    Params = <>
+    Macros = <>
+    Left = 112
+    Top = 88
+  end
+  object qryUpgrades: TSQLQuery
+    PacketRecords = -1
+    FieldDefs = <>
+    Database = SQLiteConn
+    Transaction = SQLTrans
+    Params = <>
+    Macros = <>
+    Left = 176
+    Top = 88
+  end
+  object qryLogs: TSQLQuery
+    PacketRecords = -1
+    FieldDefs = <>
+    Database = SQLiteConn
+    Transaction = SQLTrans
+    Params = <>
+    Macros = <>
+    Left = 240
+    Top = 24
+  end
+end

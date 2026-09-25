@@ -1,0 +1,105 @@
+object frmLogViewer: TfrmLogViewer
+  Left = 400
+  Height = 471
+  Top = 150
+  Width = 700
+  BorderStyle = bsDialog
+  Caption = 'INTEL ARCHIVES'
+  ClientHeight = 471
+  ClientWidth = 700
+  Color = clForm
+  Font.Name = 'Consolas'
+  Position = poMainFormCenter
+  LCLVersion = '4.8.0.0'
+  OnShow = FormShow
+  object lblTitle: TLabel
+    Left = 12
+    Height = 30
+    Top = 12
+    Width = 676
+    Align = alTop
+    BorderSpacing.Around = 12
+    Caption = 'INTERCEPTED TRANSMISSION LOGS'
+    Font.Color = clBlack
+    Font.Height = -21
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object sgLogs: TStringGrid
+    Left = 12
+    Height = 220
+    Top = 54
+    Width = 676
+    Align = alTop
+    AutoFillColumns = True
+    BorderSpacing.Around = 12
+    Color = clInfoBk
+    ColCount = 6
+    FixedCols = 0
+    Font.Color = clBlack
+    Font.Height = -13
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect]
+    ParentFont = False
+    RowCount = 1
+    TabOrder = 0
+    OnSelectCell = sgLogsSelectCell
+    ColWidths = (
+      112
+      112
+      112
+      112
+      112
+      112
+    )
+    Cells = (
+      6
+      0
+      0
+      'LOG ID'
+      1
+      0
+      'TARGET'
+      2
+      0
+      'AZ / EL'
+      3
+      0
+      'FREQ'
+      4
+      0
+      'PEAK SNR'
+      5
+      0
+      'STATUS'
+    )
+  end
+  object memoPayload: TMemo
+    Left = 12
+    Height = 114
+    Top = 286
+    Width = 676
+    Align = alTop
+    BorderSpacing.Around = 12
+    Color = clMoneyGreen
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -14
+    Font.Name = 'Consolas'
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssAutoVertical
+    TabOrder = 1
+  end
+  object btnClose: TButton
+    Left = 230
+    Height = 45
+    Top = 416
+    Width = 240
+    Caption = 'CLOSE ARCHIVES'
+    Font.Style = [fsBold]
+    ModalResult = 11
+    ParentFont = False
+    TabOrder = 2
+    OnClick = btnCloseClick
+  end
+end

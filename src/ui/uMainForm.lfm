@@ -1,0 +1,359 @@
+object frmMain: TfrmMain
+  Left = 350
+  Height = 645
+  Top = 150
+  Width = 987
+  Caption = 'SAT-LINK: Deep Space Array'
+  ClientHeight = 645
+  ClientWidth = 987
+  Color = clForm
+  Menu = MainMenu1
+  Position = poScreenCenter
+  LCLVersion = '4.8.0.0'
+  WindowState = wsMaximized
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  object pnlTerminal: TPanel
+    Left = 12
+    Height = 621
+    Top = 12
+    Width = 651
+    Align = alClient
+    BorderSpacing.Around = 12
+    BevelOuter = bvNone
+    ClientHeight = 621
+    ClientWidth = 651
+    Color = 1315860
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 0
+    object memoConsole: TMemo
+      Left = 2
+      Height = 101
+      Top = 518
+      Width = 647
+      Align = alBottom
+      BorderSpacing.Around = 2
+      BorderStyle = bsNone
+      Color = 4664361
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clLime
+      Font.Height = -13
+      Font.Name = 'Consolas'
+      Font.Pitch = fpFixed
+      Font.Quality = fqDraft
+      Lines.Strings = (
+        'SAT-LINK OS v1.0.4 loaded.'
+        'Awaiting target acquisition...'
+      )
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 0
+    end
+    object lblVisualMode: TLabel
+      Left = 12
+      Height = 17
+      Top = 29
+      Width = 637
+      Align = alTop
+      AutoSize = False
+      BorderSpacing.Left = 10
+      BorderSpacing.Around = 2
+      Caption = 'TERMINAL VISUALIZATION'
+      Font.Color = clSilver
+      Font.Height = -13
+      Font.Name = 'Consolas'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblStatus: TLabel
+      Left = 12
+      Height = 25
+      Top = 2
+      Width = 637
+      Align = alTop
+      AutoSize = False
+      BorderSpacing.Left = 10
+      BorderSpacing.Around = 2
+      Caption = 'STATUS: IDLE'
+      Font.Color = clSilver
+      Font.Height = -19
+      Font.Name = 'Consolas'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object pbTerminal: TPaintBox
+      Left = 10
+      Height = 452
+      Top = 56
+      Width = 631
+      Align = alClient
+      BorderSpacing.Around = 10
+      OnPaint = pbTerminalPaint
+    end
+  end
+  object pnlControls: TPanel
+    Left = 675
+    Height = 621
+    Top = 12
+    Width = 300
+    Align = alRight
+    BorderSpacing.Top = 12
+    BorderSpacing.Right = 12
+    BorderSpacing.Bottom = 12
+    BevelOuter = bvLowered
+    ClientHeight = 621
+    ClientWidth = 300
+    Color = clBlack
+    Font.Name = 'Consolas'
+    ParentBackground = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 1
+    object lblMotorTemp: TLabel
+      Left = 3
+      Height = 21
+      Top = 26
+      Width = 294
+      Align = alTop
+      Alignment = taCenter
+      AutoSize = False
+      BorderSpacing.Around = 2
+      Caption = 'TEMP: 25.0 °C'
+      Font.Color = 4227327
+      Font.Height = -16
+      Font.Name = 'Consolas'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblSNR: TLabel
+      Left = 3
+      Height = 21
+      Top = 3
+      Width = 294
+      Align = alTop
+      Alignment = taCenter
+      AutoSize = False
+      BorderSpacing.Around = 2
+      Caption = 'SNR: 0.0 dB'
+      Font.Color = 16744448
+      Font.Height = -16
+      Font.Name = 'Consolas'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object pbRadarOK: TPaintBox
+      Left = 1
+      Height = 247
+      Top = 49
+      Width = 298
+      Align = alClient
+      Color = clFuchsia
+      ParentColor = False
+      OnPaint = pbRadarOKPaint
+    end
+    object Panel1: TPanel
+      Left = 1
+      Height = 324
+      Top = 296
+      Width = 298
+      Align = alBottom
+      BevelOuter = bvNone
+      ClientHeight = 324
+      ClientWidth = 298
+      Color = clBtnFace
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 0
+      object lblCredits: TLabel
+        Left = 8
+        Height = 21
+        Top = 2
+        Width = 288
+        Align = alTop
+        AutoSize = False
+        BorderSpacing.Left = 6
+        BorderSpacing.Around = 2
+        Caption = 'INTEL CREDITS: 0'
+        Font.Color = clBlack
+        Font.Height = -16
+        Font.Name = 'Consolas'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object lblFrequency: TLabel
+        Left = 8
+        Height = 17
+        Top = 25
+        Width = 288
+        Align = alTop
+        AutoSize = False
+        BorderSpacing.Left = 6
+        BorderSpacing.Around = 2
+        Caption = 'FREQUENCY: 100.00 MHz'
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Consolas'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object tbFrequency: TTrackBar
+        Left = 2
+        Height = 40
+        Top = 44
+        Width = 294
+        Max = 15000
+        Min = 10000
+        Position = 10000
+        TickMarks = tmBoth
+        TickStyle = tsNone
+        OnChange = InputChange
+        Align = alTop
+        BorderSpacing.Around = 2
+        TabOrder = 0
+      end
+      object lblElevation: TLabel
+        Left = 8
+        Height = 17
+        Top = 86
+        Width = 288
+        Align = alTop
+        AutoSize = False
+        BorderSpacing.Left = 6
+        BorderSpacing.Around = 2
+        Caption = 'ELEVATION: 0°'
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Consolas'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object tbElevation: TTrackBar
+        Left = 2
+        Height = 40
+        Top = 105
+        Width = 294
+        Max = 90
+        Position = 0
+        TickMarks = tmBoth
+        TickStyle = tsNone
+        OnChange = InputChange
+        Align = alTop
+        BorderSpacing.Around = 2
+        TabOrder = 1
+      end
+      object lblAzimuth: TLabel
+        Left = 8
+        Height = 17
+        Top = 147
+        Width = 288
+        Align = alTop
+        AutoSize = False
+        BorderSpacing.Left = 6
+        BorderSpacing.Around = 2
+        Caption = 'AZIMUTH: 0°'
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Consolas'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object tbAzimuth: TTrackBar
+        Left = 2
+        Height = 40
+        Top = 166
+        Width = 294
+        Max = 360
+        Position = 0
+        TickMarks = tmBoth
+        TickStyle = tsNone
+        OnChange = InputChange
+        Align = alTop
+        BorderSpacing.Around = 2
+        TabOrder = 2
+      end
+      object cbVisualMode: TComboBox
+        Left = 7
+        Height = 22
+        Top = 208
+        Width = 284
+        Align = alTop
+        BorderSpacing.Left = 5
+        BorderSpacing.Right = 5
+        BorderSpacing.Around = 2
+        ItemHeight = 14
+        ItemIndex = 0
+        Items.Strings = (
+          'Tactical Red Waterfall'
+          'Cold Blue SDR Matrix'
+          'Real-time Oscilloscope'
+          'FFT Spectrum Analyzer'
+          'Digital Seismometer'
+        )
+        Style = csDropDownList
+        TabOrder = 3
+        Text = 'Tactical Red Waterfall'
+        OnChange = cbVisualModeChange
+      end
+      object btnUpgrade: TButton
+        Left = 7
+        Height = 47
+        Top = 232
+        Width = 284
+        Align = alTop
+        BorderSpacing.Left = 5
+        BorderSpacing.Right = 5
+        BorderSpacing.Around = 2
+        Caption = 'ENGINEERING TERMINAL'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 4
+        OnClick = btnUpgradeClick
+      end
+      object btnViewLogs: TButton
+        Left = 7
+        Height = 41
+        Top = 281
+        Width = 284
+        Align = alClient
+        BorderSpacing.Left = 5
+        BorderSpacing.Right = 5
+        BorderSpacing.Around = 2
+        Caption = 'INTEL ARCHIVES'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 5
+        OnClick = btnViewLogsClick
+      end
+    end
+  end
+  object GameLoopTimer: TTimer
+    Enabled = False
+    Interval = 16
+    OnTimer = GameLoopTimerTimer
+    Left = 512
+    Top = 296
+  end
+  object MainMenu1: TMainMenu
+    Left = 416
+    Top = 296
+    object MenuItem1: TMenuItem
+      Caption = 'Application'
+      object MenuItem3: TMenuItem
+        Caption = 'Exit'
+        OnClick = MenuItem3Click
+      end
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Help'
+      object MenuItem4: TMenuItem
+        Caption = 'Tutorial (PDF)'
+      end
+      object mnAbout: TMenuItem
+        Caption = 'About'
+        OnClick = mnAboutClick
+      end
+    end
+  end
+end
