@@ -36,3 +36,18 @@ This project is built as a lightweight, native desktop application using:
 2. **BGRABitmap** package installed via Online Package Manager (OPM) in Lazarus.
 3. Windows/Linux environment.
 
+4. 
+## Download 
+[Fresh Release Here ](https://github.com/CodeInPas/SatLink/releases/tag/Satlink_v01)) 
+
+## ☕ Support the Project
+
+If you find **Satlink** helpful and want to support its ongoing development, consider buying me a coffee or sending a tip. Any support is deeply appreciated!
+
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Buy%20Me%20a%20Coffee-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://Ko-fi.com/ainovasinusantara)
+[![PayPal](https://img.shields.io/badge/PayPal-Donate-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/KangOz)
+
+> **💡 Your support keeps the momentum going!**  
+> Every contribution directly fuels my passion, energy, and motivation to continuously build, maintain, and release even more useful open-source desktop applications for the developer community.
+
+
