@@ -38,7 +38,7 @@ This project is built as a lightweight, native desktop application using:
 
 4. 
 ## Download 
-[Fresh Release Here ](https://github.com/CodeInPas/SatLink/releases/tag/Satlink_v01)) 
+[Fresh Release Here ](https://github.com/CodeInPas/SatLink/releases/tag/Satlink_v01) 
 
 ## ☕ Support the Project
 
