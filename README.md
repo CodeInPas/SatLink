@@ -1,6 +1,6 @@
 # SAT-LINK: Deep Space Array 🛰️
 
-> SAT-LINK is a tactical radio operator simulation. Players track celestial anomalies using azimuth, elevation, and frequency to intercept secure payloads. Featuring a cyberpunk UI with real-time spectrums, you must decrypt signals, manage system heat, and evade active enemy traces to earn Intel Credits and upgrade your hardware.
+> SAT-LINK is a tactical radio operator simulation. Players track celestial anomalies using azimuth, elevation, and frequency to intercept secure payloads. Featuring real-time spectrums, you must decrypt signals, manage system heat, and evade active enemy traces to earn Intel Credits and upgrade your hardware.
 
 
 <img width="800" height="454" alt="Satlink" src="https://github.com/user-attachments/assets/ab88fe00-33a3-48b5-a138-1198398ed873" />
