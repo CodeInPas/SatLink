@@ -7,7 +7,6 @@
 
 ## 📡 Features
 
-* **Immersive Cyberpunk UI:** Custom-drawn, hardware-accelerated interface built entirely without standard OS controls.
 * **5 Real-Time Visualization Engines:** 
   * Tactical Red Waterfall
   * Cold Blue SDR Matrix
